@@ -276,7 +276,7 @@
       "parameters": {
         "conditions": {
           "options": {
-            "caseSensitive": true,
+            "caseSensitive": true, 
             "leftValue": "",
             "typeValidation": "strict",
             "version": 2
@@ -347,12 +347,12 @@
           "thread_ts": {
             "replyValues": {
               "thread_ts": "={{ $('slack_trigger').last().json.event_ts }}"
-            }
+            } 
           }
         }
       },
       "type": "n8n-nodes-base.slack",
-      "typeVersion": 2.3,
+      "typeVersion": 2.3, 
       "position": [
         120,
         1020
@@ -381,7 +381,7 @@
       "id": "1635cf5d-e9ac-44f3-8ee5-77e2e87b881f",
       "name": "write_tweet_output_parser"
     },
-    {
+    { 
       "parameters": {
         "select": "channel",
         "channelId": {
@@ -416,7 +416,7 @@
     },
     {
       "parameters": {
-        "resource": "reaction",
+        "resource": "reaction", 
         "channelId": {
           "__rl": true,
           "value": "C07RY6EQ6SH",
@@ -456,7 +456,7 @@
               "id": "a8a140f5-ae97-4476-b4de-fac4d3f30767",
               "leftValue": "={{ $json.attachments[0].text }}",
               "rightValue": "RT",
-              "operator": {
+              "operator": { 
                 "type": "string",
                 "operation": "contains"
               }
@@ -486,7 +486,7 @@
       "typeVersion": 4.2,
       "position": [
         1360,
-        -20
+        -20 
       ],
       "id": "e69bd2fc-4831-4ec2-afdb-f0f05801458d",
       "name": "fetch_tweet_content"
@@ -516,7 +516,7 @@
       "retryOnFail": true,
       "waitBetweenTries": 5000
     },
-    {
+    { 
       "parameters": {
         "url": "http://api.aitools.inc/categories",
         "options": {}
@@ -546,7 +546,7 @@
     {
       "parameters": {
         "text": "={{ $('write_tweet').item.json.output.tweet_content }}",
-        "additionalFields": {
+        "additionalFields": { 
           "inReplyToStatusId": {
             "__rl": true,
             "value": "={{ $('extract_tweet_id').item.json.output.tweet_id }}",
@@ -576,7 +576,7 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "position": [
-        1120,
+        1120, 
         720
       ],
       "id": "669345a3-b5b6-4c40-85ab-e54135c45394",
@@ -611,7 +611,7 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        -300,
+        -300, 
         -60
       ],
       "typeVersion": 1,
@@ -661,7 +661,7 @@
                   "title": "Influence",
                   "short": true
                 }
-              ],
+              ], 
               "mrkdwn_in": [
                 "fields",
                 "pretext",
@@ -751,7 +751,7 @@
             "node": "is_good_candidate",
             "type": "main",
             "index": 0
-          }
+          } 
         ]
       ]
     },
@@ -786,7 +786,7 @@
     },
     "gpt-4o-mini": {
       "ai_languageModel": [
-        [
+        [ 
           {
             "node": "evaluate_tweet",
             "type": "ai_languageModel",
@@ -816,7 +816,7 @@
         [
           {
             "node": "fetch_categories",
-            "type": "main",
+            "type": "main", 
             "index": 0
           }
         ],
@@ -856,7 +856,7 @@
         [
           {
             "node": "write_tweet",
-            "type": "ai_outputParser",
+            "type": "ai_outputParser", 
             "index": 0
           }
         ]
@@ -891,7 +891,7 @@
             "node": "get_tweet_content",
             "type": "main",
             "index": 0
-          }
+          } 
         ]
       ]
     },
@@ -926,7 +926,7 @@
             "index": 0
           }
         ]
-      ]
+      ] 
     },
     "post_reply_tweet": {
       "main": [
@@ -956,7 +956,7 @@
           {
             "node": "write_tweet",
             "type": "ai_languageModel",
-            "index": 0
+            "index": 0 
           }
         ]
       ]
@@ -968,7 +968,7 @@
   },
   "versionId": "33c1f1e3-a201-4466-9405-3da0cba70435",
   "meta": {
-    "templateCredsSetupCompleted": true,
+    "templateCredsSetupCompleted": true, 
     "instanceId": "06e5009344f682419c20ccd4ecdcb5223bbb91761882af93ac6d468dbc2cbf8d"
   },
   "id": "yad1A85lKxOrlKyJ",
